@@ -6,27 +6,28 @@ __pycache__/
 *.so
 *.egg
 *.egg-info/
+.eggs/
 dist/
 build/
-.eggs/
 *.manifest
 *.spec
 *.mo
 *.pot
 
-# Django stuff:
+# Django specific
 *.log
-*.pot
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media/
 staticfiles/
 static_root/
+secrets.json
+
+# Environment files
 .env
 .env.*
 *.env
-secrets.json
 
 # ============================
 # 🐋 Docker
@@ -91,8 +92,6 @@ env/
 env.bak/
 pip-wheel-metadata/
 pip-log.txt
-poetry.lock
-poetry.toml
 __pypackages__/
 .pyre/
 .mypy_cache/
@@ -124,17 +123,19 @@ junit.xml
 *.gcov
 *.gcda
 *.gcno
-.cache/
 pytestdebug.log
 pytest.log
 
 # ============================
 # 🧭 Documentação / Build Tools
 # ============================
+# MkDocs & Sphinx build outputs
 docs/_build/
 site/
 public/
 mkdocs-site/
+
+# Ignora somente builds gerados — mantém markdowns e config YAML
 *.html
 *.pdf
 
@@ -162,4 +163,12 @@ ipython_config.py
 *.jks
 *.bak
 *.old
-/site/
+
+#TODO  : Adicionar outras regras específicas do projeto conforme necessário
+💡 O que muda aqui
+
+✅ site/ agora é ignorado completamente — builds do MkDocs nunca serão versionados.
+✅ .env e derivados ignorados com segurança.
+✅ Evita duplicação (tinha /site/ repetido no final).
+✅ Mantém espaço pra front-end (caso React ou Next.js apareçam no futuro).
+✅ Padrão compatível com Docker, Poetry e VS Code.
