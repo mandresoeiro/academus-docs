@@ -1,0 +1,58 @@
+# ===============================
+# 🧩 .editorconfig — Padrão global de formatação
+# ===============================
+# Mais info: https://editorconfig.org
+
+root = true
+
+# --------------------------------
+# 🌍 Regras padrão para todos os arquivos
+# --------------------------------
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# --------------------------------
+# 🐍 Python
+# --------------------------------
+[*.py]
+indent_size = 4
+max_line_length = 88
+
+# --------------------------------
+# 🌐 HTML, CSS e JS/TS
+# --------------------------------
+[*.{html,css,js,ts,jsx,tsx}]
+indent_size = 2
+
+# --------------------------------
+# 📄 Markdown e texto
+# --------------------------------
+[*.{md,txt}]
+trim_trailing_whitespace = false
+
+# --------------------------------
+# ⚙️ YAML e JSON
+# --------------------------------
+[*.{yml,yaml,json}]
+indent_size = 2
+
+
+#TODO
+'''💡 O que ele faz
+
+root = true: define que esse é o arquivo principal (ignora configs herdadas).
+end_of_line = lf: padroniza o fim de linha (importante pra WSL e Git).
+insert_final_newline / trim_trailing_whitespace: limpa espaços e adiciona newline no fim.
+indent_style = space / indent_size: evita mistura de tabs e espaços.
+Regras separadas por tipo de arquivo — 4 espaços pra Python, 2 pra HTML/JS.
+
+🧠 Por que é importante
+
+Evita diffs falsos no Git por causa de espaço ou quebra de linha.
+Mantém o código consistente entre diferentes IDEs.
+Trabalha junto com o VS Code, PyCharm, Black, Prettier e Flake8.

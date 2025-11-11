@@ -1,2 +1,165 @@
-# backend/.gitignore
+# ============================
+# 🐍 Python / Django
+# ============================
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+*.pot
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static_root/
 .env
+.env.*
+*.env
+secrets.json
+
+# ============================
+# 🐋 Docker
+# ============================
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+docker-compose.dev.yml
+*.pid
+
+# ============================
+# 💻 VS Code / IDEs
+# ============================
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-workspace
+*.sublime-project
+
+# ============================
+# 💾 Sistema / OS
+# ============================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.Trashes
+*.swp
+*.tmp
+*.bak
+*.old
+
+# ============================
+# 💻 Node / React / Frontend
+# ============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-store/
+.cache/
+.next/
+out/
+coverage/
+build/
+dist/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ============================
+# 🐳 Poetry / Pipenv / Virtualenv
+# ============================
+.venv/
+venv/
+env/
+env.bak/
+pip-wheel-metadata/
+pip-log.txt
+poetry.lock
+poetry.toml
+__pypackages__/
+.pyre/
+.mypy_cache/
+.pytype/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ============================
+# ⚙️ Compiladores / Binários
+# ============================
+*.exe
+*.dll
+*.out
+*.class
+*.o
+*.a
+*.dylib
+
+# ============================
+# 🧪 Testes e CI
+# ============================
+.tox/
+.nox/
+coverage.xml
+test-results/
+junit.xml
+*.cover
+*.gcov
+*.gcda
+*.gcno
+.cache/
+pytestdebug.log
+pytest.log
+
+# ============================
+# 🧭 Documentação / Build Tools
+# ============================
+docs/_build/
+site/
+public/
+mkdocs-site/
+*.html
+*.pdf
+
+# ============================
+# 🧰 Misc. Tools / Config
+# ============================
+celerybeat-schedule
+celerybeat.pid
+*.sage.py
+ipython_config.py
+*.ipynb_checkpoints
+*.sqlite3
+*.db
+
+# ============================
+# 🔐 Segurança
+# ============================
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.csr
+*.der
+*.jks
+*.bak
+*.old
+/site/
