@@ -1,1 +1,85 @@
-site_name: My Docs
+# ============================================
+# 🌐 Configuração MkDocs + Material + Deploy
+# Projeto: Academus Docs
+# Autor: mandresoeiro
+# ============================================
+
+site_name: "Academus Docs"
+site_description: "Documentação oficial do projeto Academus"
+site_url: "https://mandresoeiro.github.io/academus-docs/"
+repo_name: "mandresoeiro/academus-docs"
+repo_url: "https://github.com/mandresoeiro/academus-docs"
+
+# ============================================
+# 🎨 Tema
+# ============================================
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - header.autohide
+
+# ============================================
+# 🗂️ Estrutura de navegação
+# ============================================
+nav:
+  - Início: index.md
+  - Guia Rápido:
+      - Instalação: docs/instalacao.md
+      - Deploy: docs/deploy.md
+  - Referência:
+      - API: docs/api.md
+      - Configurações: docs/configuracoes.md
+  - Sobre: docs/sobre.md
+
+# ============================================
+# ⚙️ Plugins (opcionais)
+# ============================================
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      type: datetime
+      fallback_to_build_date: true
+
+# ============================================
+# ✨ Extras
+# ============================================
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tasklist
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+        # ============================================
+        # 🚀 Deploy
+        # ============================================
+        # Para publicar:
+        # poetry run mkdocs gh-deploy --force
+
